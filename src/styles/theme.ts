@@ -1,6 +1,6 @@
 const colors = {
   purpleMid: '#633BBC',
-  purbleLight: '#8257E5',
+  purpleLight: '#8257E5',
   white: '#FFFFFF',
   gray10: '#E1E1E6',
   gray20: '#8D8D99',
