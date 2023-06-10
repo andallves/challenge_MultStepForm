@@ -1,7 +1,9 @@
 import * as Styled from './styles';
 
-export const Select = ({children}) => {
+export const Select = ({ id }) => {
   return (
-    <Styled.Container><label>{children}</label></Styled.Container>
-  )
-}
+    <Styled.Container>
+      <div id={id}>{id}</div>
+    </Styled.Container>
+  );
+};

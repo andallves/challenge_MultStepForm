@@ -20,7 +20,7 @@ export const Container = styled.p`
     flex-grow: 0;
 
     /* font styles */
-    > label {
+    > div {
       width: .8rem;
       height: rem;
 
