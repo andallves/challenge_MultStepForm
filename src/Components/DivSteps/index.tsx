@@ -5,11 +5,17 @@ import { Text } from '../Text';
 export const DivSteps = () => {
   return (
     <Styled.Container>
-      <Text text={"Contato"} />
+      <div>
+      <Text text={'Contato'} isDark={true} isUppercase={false} isBold={true} />
+      </div>
       <IoIosArrowForward />
-      <Text text={'Empresa'} />
+      <div>
+      <Text text={'Empresa'} isDark={true} isUppercase={false} isBold={true} />
+      </div>
       <IoIosArrowForward />
-      <Text text={'Projeto'} />
+      <div>
+      <Text text={'Projeto'} isDark={true} isUppercase={false} isBold={true} />
+      </div>
     </Styled.Container>
-  )
-}
+  );
+};
