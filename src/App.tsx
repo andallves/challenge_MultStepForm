@@ -1,10 +1,9 @@
-import { Button } from './Components/Button'
+import { CardForm } from './layout/CardForm'
 
 function App() {
   return (
     <>
-      <h1>hello world</h1>
-      <Button btnText='Continuar' />
+      <CardForm />
     </>
   )
 }
