@@ -8,7 +8,7 @@ export const DivSteps = () => {
   return (
     <Styled.Container>
       <Steps>
-        <Select>1</Select>
+        <Select id={'1'}/>
         <Text
           text={'Contato'}
           isDark={true}
@@ -18,7 +18,7 @@ export const DivSteps = () => {
       </Steps>
       <IoIosArrowForward />
       <Steps>
-        <Select>1</Select>
+        <Select id={'2'}/>
         <Text
           text={'Empresa'}
           isDark={true}
@@ -28,7 +28,7 @@ export const DivSteps = () => {
       </Steps>
       <IoIosArrowForward />
       <Steps>
-        <Select>1</Select>
+        <Select id={'3'}/>
         <Text
           text={'Projeto'}
           isDark={true}
