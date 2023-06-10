@@ -1,17 +1,27 @@
 import styled, { css } from 'styled-components';
+import { StyleClosetTheme } from '../../styles/theme';
 
-export const Container = styled.p`
-  ${({ theme }) => css`
+interface Text {
+  theme: StyleClosetTheme;
+  isDark: boolean;
+  isUppercase: boolean;
+  isBold: boolean;
+}
+
+export const Text =  styled.p`
+  ${({ theme, isDark = false, isUppercase, isBold = false}: Text) => css`
     width: 9.4rem;
     height: 2.4rem;
     font-style: normal;
-    font-weight: ${theme.fontTypes.bold};
+    font-weight: ${isBold ? 700 : 400};
     line-height: 150%;
-    text-transform: uppercase;
-    color: ${theme.colors.white};
+    text-transform: ${isUppercase ? 'uppercase' : 'none'};
+    color: ${isDark ? theme.colors.gray40 : theme.colors.white};
 
     flex: none;
     order: 1;
     flex-grow: 0;
+
+
   `};
 `;

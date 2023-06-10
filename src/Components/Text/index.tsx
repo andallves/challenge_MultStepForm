@@ -2,12 +2,15 @@ import * as Styled from './styles';
 
 interface Text {
   text: string;
+  isDark: boolean;
+  isUppercase: boolean;
+  isBold: boolean;
 }
 
-export const Text = ({ text }: Text) => {
+export const Text = ({ text, isDark, isUppercase, isBold }: Text) => {
   return (
-    <Styled.Container>
+    <Styled.Text isDark={isDark} isUppercase={isUppercase} isBold={isBold}>
       {text}
-    </Styled.Container>
+    </Styled.Text>
   )
 }
