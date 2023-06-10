@@ -17,12 +17,11 @@ const fontTypes = {
   bold: 700,
 };
 
-interface StyleClosetTheme {
+export interface StyleClosetTheme {
   colors: { [key in keyof typeof colors]: string };
   fontFamily: { [key in keyof typeof fontFamily]: string };
   fontTypes: { [key in keyof typeof fontTypes]: number };
 }
 
-const theme: StyleClosetTheme = { colors, fontFamily, fontTypes };
+export const theme: StyleClosetTheme = { colors, fontFamily, fontTypes };
 
-export { theme, StyleClosetTheme };
