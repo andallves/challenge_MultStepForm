@@ -1,13 +1,13 @@
 import * as Styled from './styles';
 
 interface Text {
-  btnText: string;
+  text: string;
 }
 
-export const Text = ({ btnText }: Text) => {
+export const Text = ({ text }: Text) => {
   return (
     <Styled.Container>
-      {btnText}
+      {text}
     </Styled.Container>
   )
 }

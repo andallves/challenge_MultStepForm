@@ -7,7 +7,7 @@ interface Button {
 export const Button = ({ btnText }: Button) => {
   return (
     <Styled.Container>
-      <Text btnText={btnText} />
+      <Text text={btnText} />
     </Styled.Container>
   )
 }
