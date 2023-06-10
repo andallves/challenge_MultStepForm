@@ -4,17 +4,17 @@ export const Container = styled.div`
   ${() => css`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    padding: 0;
-    gap: 4rem;
+    padding: .8rem;
+    gap: .8rem;
 
-    width: 52.8rem;
+    width: 11.2rem;
     height: 4.4rem;
+
+    border-radius: .2rem;
 
     flex: none;
     order: 0;
-    align-self: stretch;
     flex-grow: 0;
   `};
 `;

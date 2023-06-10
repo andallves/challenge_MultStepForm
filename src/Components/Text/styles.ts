@@ -10,8 +10,8 @@ interface Text {
 
 export const Text =  styled.p`
   ${({ theme, isDark = false, isUppercase, isBold = false}: Text) => css`
-    width: 9.4rem;
     height: 2.4rem;
+
     font-style: normal;
     font-weight: ${isBold ? 700 : 400};
     line-height: 150%;
@@ -21,7 +21,5 @@ export const Text =  styled.p`
     flex: none;
     order: 1;
     flex-grow: 0;
-
-
   `};
 `;
