@@ -1,7 +1,14 @@
 import styled, { css } from 'styled-components';
+import { StyleClosetTheme } from '../../styles/theme';
 
+interface Container {
+  theme: StyleClosetTheme;
+  isBold: boolean;
+  isUppercase: boolean;
+  isDark: boolean;
+}
 export const Container = styled.button`
-  ${({ theme }) => css`
+  ${({ theme, isBold, isUppercase, isDark }: Container) => css`
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -23,6 +30,20 @@ export const Container = styled.button`
     order: 0;
     flex-grow: 0;
 
+    > span {
+      width: 9.4rem;
+      height: 2.4rem;
 
+      font-style: normal;
+      font-weight: ${isBold ? 700 : 400};
+      font-size: 1.6rem;
+      line-height: 150%;
+      text-transform: ${isUppercase ? 'uppercase' : 'none'};
+      color: ${isDark ? theme.colors.gray40 : theme.colors.white};
+
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+    }
   `}
 `;
