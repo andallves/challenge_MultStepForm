@@ -1,10 +1,6 @@
-import  { createGlobalStyle } from 'styled-components';
+import  { createGlobalStyle } from './styled-components';
 
-interface GlobalStylesProp {
-  default: string;
-}
-
-export const GlobalStyles =  createGlobalStyle<GlobalStylesProp>`
+export const GlobalStyles =  createGlobalStyle`
  * {
     margin: 0;
     padding: 0;
@@ -17,6 +13,6 @@ export const GlobalStyles =  createGlobalStyle<GlobalStylesProp>`
 
   body {
     font-size: 1.6rem;
-    font-family: ${({ theme }) => theme.font.family.default};
+    font-family: ${({ theme }) => theme.fontFamily.defaultFont};
   }
 `;

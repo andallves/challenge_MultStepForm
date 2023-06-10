@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ThemeProvider } from 'styled-components';
 
-import GlobalStyles from './styles/global-styles';
-import { theme } from  './styles/theme';
-import App from './App.tsx'
+import { GlobalStyles } from './styles/global-styles';
+import { theme } from './styles/theme';
+import App from './App.tsx';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -13,4 +13,4 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <GlobalStyles />
     </ThemeProvider>
   </React.StrictMode>,
-)
+);
