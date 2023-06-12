@@ -1,15 +1,32 @@
 import * as Styled from './styles';
 interface Button {
+  nameofClass: string;
+  type: 'button' | 'submit';
   btnText: string;
   isDark: boolean;
   isUppercase: boolean;
   isBold: boolean;
+  disabled: boolean;
+  onButtonClicked: () => {};
 }
 
-export const Button = ({ btnText, isDark, isUppercase, isBold }: Button) => {
+export const Button = ({
+  nameofClass,
+  type,
+  btnText,
+  disabled,
+  onButtonClicked,
+}: Button) => {
   return (
-    <Styled.Container isDark={isDark} isUppercase={isUppercase} isBold={isBold}>
-      <span>{btnText}</span>
+    <Styled.Container nameofClass={nameofClass}>
+      <button
+        type={type}
+        className={nameofClass}
+        disabled={disabled}
+        onClick={onButtonClicked}
+      >
+        <span>{btnText}</span>
+      </button>
     </Styled.Container>
-  )
-}
+  );
+};
