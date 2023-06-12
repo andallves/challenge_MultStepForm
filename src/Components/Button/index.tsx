@@ -18,7 +18,7 @@ export const Button = ({
   onButtonClicked,
 }: Button) => {
   return (
-    <Styled.Container nameofClass={nameofClass}>
+    <Styled.Container>
       <button
         type={type}
         className={nameofClass}
