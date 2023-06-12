@@ -1,4 +1,4 @@
-import { useStepContext } from '../../contexts/StepContext';
+import { useAppContext } from '../../contexts/AppContext';
 import * as Styled from './styles';
 
 interface InputField {
@@ -6,11 +6,11 @@ interface InputField {
   name: string;
   type: string;
   placeholder: string;
-  updateFieldHandler: (name: string, target: string) => {};
 }
 
-export const InputField = ({ text, name, type, placeholder, updateFieldHandler}: InputField) => {
-  const [dispatch] = useStepContext()
+export const InputField = ({ text, name, type, placeholder }: InputField) => {
+  const { updateData } = useAppContext();
+  
   return (
     <Styled.Container>
       <label htmlFor={name}>{text}</label>
@@ -19,7 +19,9 @@ export const InputField = ({ text, name, type, placeholder, updateFieldHandler}:
         name={name}
         id={name}
         placeholder={placeholder}
-        onChange={updateFieldHandler)}
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+          updateData(event.target.value)
+        }
       />
     </Styled.Container>
   );

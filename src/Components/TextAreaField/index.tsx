@@ -1,6 +1,6 @@
 import * as Styled from './styles';
 
-export const TextAreaField = ({ text, name, placeholder, updateFieldHandler}) => {
+export const TextAreaField = ({ text, name, placeholder }) => {
   return (
     <Styled.Container>
       <label htmlFor={name}>{text}</label>
@@ -9,7 +9,7 @@ export const TextAreaField = ({ text, name, placeholder, updateFieldHandler}) =>
         id={name}
         placeholder={placeholder}
         required
-        onChange={(e) => updateFieldHandler(`${name}`, e.target.value)}
+        
       ></textarea>
     </Styled.Container>
   );
