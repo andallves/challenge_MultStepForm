@@ -1,9 +1,13 @@
 import * as Styled from './styles';
 
-export const Select = ({ id }) => {
+interface Select {
+  status: string;
+  stepText: string;
+}
+export const Select = ({ status, stepText }: Select) => {
   return (
-    <Styled.Container>
-      <div id={id}>{id}</div>
+    <Styled.Container className={status} >
+      <p>{stepText}</p>
     </Styled.Container>
   );
 };
