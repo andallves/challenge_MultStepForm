@@ -10,18 +10,11 @@ import { FirstStep } from '../pages/FirstStep';
 
 function App() {
   const [state, actions] = useStepContext();
-
-  const updateFieldHandler = (key: string, value: string) => {
-    actions.update(key: value)
-  }
-
-  const { currentStep, currentComponent, changeStep, isLastStep, isFirstStep } =
-    userForm(formComponents);
-
+  
   return (
     <main>
       <CardForm>
-        <DivSteps currentStep={state}/>
+        <DivSteps currentStep={state.stepId}/>
         <Divider />
 
         <FirstStep updateFieldHandler={actions.update}/>
