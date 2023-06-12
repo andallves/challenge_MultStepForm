@@ -1,41 +1,33 @@
 import * as Styled from './styles';
 import { IoIosArrowForward } from 'react-icons/io';
-import { Text } from '../Text';
 import { Steps } from '../Steps';
 import { Select } from '../Select';
+import { useStepContext } from '../../contexts/StepContext';
+import { ReducerProps } from '../../contexts/StepContext/reducer';
 
-export const DivSteps = () => {
+export const DivSteps = ({currentStep}) => {
+  const [state, action] = useStepContext<ReducerProps[]>();
   return (
     <Styled.Container>
-      <Steps>
-        <Select id={'1'}/>
-        <Text
-          text={'Contato'}
-          isDark={true}
-          isUppercase={false}
-          isBold={true}
-        />
-      </Steps>
+        <Steps>
+          <Select status={'active'} stepText={'1'} />
+          <p className="text">Contato</p>
+        </Steps>
+
       <IoIosArrowForward />
+
       <Steps>
-        <Select id={'2'}/>
-        <Text
-          text={'Empresa'}
-          isDark={true}
-          isUppercase={false}
-          isBold={true}
-        />
+        <Select status={currentStep >= 1 ? 'active' : 'disable'} stepText={'2'} />
+        <p className="text">Empresa</p>
       </Steps>
+
       <IoIosArrowForward />
+
       <Steps>
-        <Select id={'3'}/>
-        <Text
-          text={'Projeto'}
-          isDark={true}
-          isUppercase={false}
-          isBold={true}
-        />
+        <Select status={currentStep >= 2 ? 'active' : 'disable'} stepText={'3'} />
+        <p className="text">Projeto</p>
       </Steps>
     </Styled.Container>
+
   );
 };
