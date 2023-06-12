@@ -1,4 +1,4 @@
-export interface UserData {
+export type State = {
   stepId: number;
   status: string;
   name: string;
@@ -10,8 +10,8 @@ export interface UserData {
   projectGoal: string;
 
 }
-export const initialState: UserData = {
-  stepId: 1,
+export const initialState: State = {
+  stepId: 0,
   status:'select',
   name: 'Andre',
   phoneNumber: 85992794032,
