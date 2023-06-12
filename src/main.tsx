@@ -4,16 +4,16 @@ import { ThemeProvider } from 'styled-components';
 
 import { GlobalStyles } from './styles/global-styles';
 import { theme } from './styles/theme';
-import App from './App/index.tsx';
-import { StepProvider } from './contexts/StepProvider';
+import { StepContextProvider } from './contexts/StepContext/index.tsx';
+import { AppRoutes } from './routes/index.tsx';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <StepProvider>
+    <StepContextProvider>
       <ThemeProvider theme={theme}>
-        <App />
+        <AppRoutes />
         <GlobalStyles />
       </ThemeProvider>
-    </StepProvider>
+    </StepContextProvider>
   </React.StrictMode>,
 );
