@@ -2,7 +2,7 @@ import { InputContainer } from '../../Components/InputContainer';
 import { InputField } from '../../Components/InputField';
 import * as Styled from './styles';
 
-export const FirstStep = ({updateFieldHandler}) => {
+export const FirstStep = ({}) => {
 
   return (
     <Styled.Container>
@@ -12,8 +12,6 @@ export const FirstStep = ({updateFieldHandler}) => {
           name={'nome'}
           type={'text'}
           placeholder={'Como prefere ser chamado'}
-          updateFieldHandler={updateFieldHandler}
-
         />
 
         <InputField
@@ -21,8 +19,6 @@ export const FirstStep = ({updateFieldHandler}) => {
           name={'telefone'}
           type={'number'}
           placeholder={'Digite seu número de WhatsApp '}
-          updateFieldHandler={updateFieldHandler}
-
         />
 
         <InputField
@@ -30,8 +26,6 @@ export const FirstStep = ({updateFieldHandler}) => {
           name={'email'}
           type={'email'}
           placeholder={'Digite seu e-mail'}
-          updateFieldHandler={updateFieldHandler}
-
         />
       </InputContainer>
     </Styled.Container>
