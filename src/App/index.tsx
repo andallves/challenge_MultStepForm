@@ -26,7 +26,7 @@ function App() {
         <CardForm>
           <DivSteps currentStep={currentStep} />
           <Divider />
-          {
+
             <form
               onSubmit={(event: React.FormEvent<HTMLFormElement>): void =>
                 changeStep(currentStep + 1, event)
@@ -40,10 +40,6 @@ function App() {
                     nameofClass={'prev'}
                     type={'button'}
                     btnText="Voltar"
-                    isDark={false}
-                    isUppercase={true}
-                    isBold={true}
-                    disabled={false}
                     onButtonClicked={() => changeStep(currentStep - 1)}
                   />
                 )}
@@ -53,25 +49,17 @@ function App() {
                     nameofClass={'next'}
                     type={'submit'}
                     btnText="Continuar"
-                    isDark={false}
-                    isUppercase={true}
-                    isBold={true}
-                    disabled={false}
                   />
                 ) : (
                   <Button
                     nameofClass={'next'}
                     type={'button'}
                     btnText="Enviar"
-                    isDark={false}
-                    isUppercase={true}
-                    isBold={true}
-                    disabled={false}
                   />
                 )}
               </ButtonContainer>
             </form>
-          }
+
         </CardForm>
       </Styled.Container>
     </main>
