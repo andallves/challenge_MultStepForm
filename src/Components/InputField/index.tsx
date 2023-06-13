@@ -1,15 +1,9 @@
-import { useAppContext } from '../../contexts/AppContext';
+import { InputFieldProps } from '../../interfaces/InputField';
 import * as Styled from './styles';
 
-interface InputField {
-  text: string;
-  name: string;
-  type: string;
-  placeholder: string;
-}
 
-export const InputField = ({ text, name, type, placeholder }: InputField) => {
-  const { updateData } = useAppContext();
+
+export const InputField = ({ text, name, type, placeholder, handleChangeInput }: InputFieldProps) => {
 
   return (
     <Styled.Container>
@@ -20,9 +14,7 @@ export const InputField = ({ text, name, type, placeholder }: InputField) => {
         id={name}
         placeholder={placeholder}
         required
-        onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-          updateData(event.target.value)
-        }
+        onChange={handleChangeInput}
       />
     </Styled.Container>
   );

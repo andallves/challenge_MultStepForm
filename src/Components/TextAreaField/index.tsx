@@ -1,6 +1,7 @@
+import { InputFieldProps } from '../../interfaces/InputField';
 import * as Styled from './styles';
 
-export const TextAreaField = ({ text, name, placeholder }) => {
+export const TextAreaField = ({ text, name, placeholder, handleChangeTextArea }: InputFieldProps) => {
   return (
     <Styled.Container>
       <label htmlFor={name}>{text}</label>
@@ -9,6 +10,7 @@ export const TextAreaField = ({ text, name, placeholder }) => {
         id={name}
         placeholder={placeholder}
         required
+        onChange={handleChangeTextArea}
       ></textarea>
     </Styled.Container>
   );
