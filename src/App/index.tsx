@@ -2,6 +2,7 @@ import { Button } from '../Components/Button';
 import { ButtonContainer } from '../Components/ButtonContainer';
 import { DivSteps } from '../Components/DivSteps';
 import { Divider } from '../Components/Divider';
+import { useAppContext } from '../contexts/AppContext';
 import { userForm } from '../hooks/userForm';
 import { CardForm } from '../layout/CardForm';
 import { FirstStep } from '../pages/FirstStep';
@@ -11,6 +12,8 @@ import { ThirdStep } from '../pages/ThirdStep';
 import * as Styled from './styles';
 
 function App() {
+  const {state} = useAppContext();
+
   const steps: React.ReactNode[] = [
     <FirstStep />,
     <SecondStep />,
@@ -55,6 +58,7 @@ function App() {
                     nameofClass={'next'}
                     type={'button'}
                     btnText="Enviar"
+                    onButtonClicked={() => console.log({state})}
                   />
                 )}
               </ButtonContainer>
