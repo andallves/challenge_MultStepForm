@@ -2,16 +2,12 @@ import * as Styled from './styles';
 import { IoIosArrowForward } from 'react-icons/io';
 import { Steps } from '../Steps';
 import { Select } from '../Select';
-import { useAppContext } from '../../contexts/AppContext';
 
 export const DivSteps = ({ currentStep }) => {
-  const { state } = useAppContext();
-
-
   return (
     <Styled.Container>
       <Steps>
-        <Select status={'active'} stepText={`${state.stepId}`} />
+        <Select status={'select'} stepText={`1`} />
         <p className="text">Contato</p>
       </Steps>
 
@@ -19,7 +15,7 @@ export const DivSteps = ({ currentStep }) => {
 
       <Steps>
         <Select
-          status={currentStep >= 1 ? 'active' : 'disable'}
+          status={currentStep >= 1 ? 'active' : ''}
           stepText={'2'}
         />
         <p className="text">Empresa</p>
@@ -29,7 +25,7 @@ export const DivSteps = ({ currentStep }) => {
 
       <Steps>
         <Select
-          status={currentStep >= 2 ? 'active' : 'disable'}
+          status={currentStep >= 2 ? 'active' : ''}
           stepText={'3'}
         />
         <p className="text">Projeto</p>
