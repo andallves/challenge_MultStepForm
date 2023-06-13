@@ -7,7 +7,7 @@ interface Button {
   isUppercase: boolean;
   isBold: boolean;
   disabled: boolean;
-  onButtonClicked: () => {};
+  onButtonClicked?: () => void;
 }
 
 export const Button = ({
