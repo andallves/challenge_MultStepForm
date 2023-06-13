@@ -53,6 +53,11 @@ export const Container = styled.div`
       align-self: stretch;
       flex-grow: 0;
 
+      &:focus {
+        outline: none;
+        border: .1rem solid ${theme.colors.purpleMid}
+      }
+
       &::placeholder {
         ${({ theme }) => css`
           height: 2.4rem;
@@ -71,9 +76,6 @@ export const Container = styled.div`
         `};
       }
 
-      &:input:focus {
-        border: .1rem solid ${theme.colors.purpleMid}
-      }
     }
   `}
 `;
