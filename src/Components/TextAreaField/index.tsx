@@ -9,7 +9,6 @@ export const TextAreaField = ({ text, name, placeholder }) => {
         id={name}
         placeholder={placeholder}
         required
-        
       ></textarea>
     </Styled.Container>
   );
