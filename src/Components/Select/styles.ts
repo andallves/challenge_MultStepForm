@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
-  .select {
+  > div.select {
     ${({ theme }) => css`
       display: flex;
       flex-direction: column;
@@ -41,7 +41,7 @@ export const Container = styled.div`
     `}
   }
 
-  .active {
+  div.active {
     ${({ theme }) => css`
       display: flex;
       flex-direction: column;
@@ -79,8 +79,8 @@ export const Container = styled.div`
         flex-grow: 0;
       }
     `};
-    
-    .disable {
+
+    > div.disabled {
       ${({ theme }) => css`
         display: flex;
         flex-direction: column;
