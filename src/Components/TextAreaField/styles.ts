@@ -52,8 +52,13 @@ export const Container = styled.div`
       align-self: stretch;
       flex-grow: 0;
 
+      &:focus {
+        outline: none;
+        border: .1rem solid ${theme.colors.purpleMid}
+      }
+
       &::placeholder {
-        width: 30rem;
+        width: 34rem;
         height: 2.4;
 
         font-family: ${theme.fontFamily.defaultFont};
