@@ -8,7 +8,7 @@ export const Divider = styled.span`
     border: .1rem solid ${theme.colors.gray10};
 
     flex: none;
-    order: 1;
+    order: 2;
     align-self: stretch;
     flex-grow: 0;
   `}
