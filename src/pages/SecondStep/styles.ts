@@ -1,9 +1,19 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.section`
+export const Container = styled.div`
   ${() => css`
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    padding: 0;
+    gap: 1.6;
+
+    width: 52.8rem;
+    height: 34.8rem;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
   `}
 `;
+
