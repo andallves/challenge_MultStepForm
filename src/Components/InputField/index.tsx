@@ -10,7 +10,7 @@ interface InputField {
 
 export const InputField = ({ text, name, type, placeholder }: InputField) => {
   const { updateData } = useAppContext();
-  
+
   return (
     <Styled.Container>
       <label htmlFor={name}>{text}</label>
@@ -19,6 +19,7 @@ export const InputField = ({ text, name, type, placeholder }: InputField) => {
         name={name}
         id={name}
         placeholder={placeholder}
+        required
         onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
           updateData(event.target.value)
         }
