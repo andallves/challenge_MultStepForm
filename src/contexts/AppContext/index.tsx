@@ -2,7 +2,6 @@ import { ReactNode, useContext, useReducer, useCallback } from 'react';
 import { createContext } from 'react';
 import { reducer } from './reducer';
 import { AppContextActions } from './AppContextActions';
-import { IDispatchAction } from '../../interfaces/IDispatchAction';
 
 export const INITIAL_STATE = {
   stepId: 1,
