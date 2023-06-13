@@ -35,6 +35,7 @@ export const Container = styled.div`
       flex-grow: 0;
 
       > span {
+        width: 9.5rem;
         height: 2.4rem;
 
         font-style: normal;
@@ -43,6 +44,7 @@ export const Container = styled.div`
         line-height: 150%;
         text-transform: uppercase;
         color: ${theme.colors.white};
+        text-align: center;
 
         flex: none;
         order: 1;
@@ -85,6 +87,7 @@ export const Container = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
 
         font-style: normal;
         font-weight: ${theme.fontTypes.bold};
