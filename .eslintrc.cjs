@@ -10,11 +10,11 @@ module.exports = {
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
-  }
+  },
   plugins: ['@typescript-eslint'],
   parser: '@typescript-eslint/parser',
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   rules: {
     'react-refresh/only-export-components': 'warn',
   },
-}
+};
